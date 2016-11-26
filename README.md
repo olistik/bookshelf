@@ -23,6 +23,11 @@ repository = BookRepository.new
 repository.create(title: "Hanami")
 ```
 
+```
+bundle exec hanami generate action web books/new
+bundle exec hanami routes
+```
+
 ## Notes
 
 Project is the main structure.
