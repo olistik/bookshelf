@@ -2,9 +2,17 @@ module Web::Controllers::Books
   class Create
     include Web::Action
 
+    params do
+      required(:book).schema do
+        required(:title).value(:str?, format?: /\AHello/)
+      end
+    end
+
     def call(params)
-      BookRepository.new.create(params[:book])
-      redirect_to '/'
+      if params.valid?
+        BookRepository.new.create(params[:book])
+        redirect_to '/'
+      end
     end
   end
 end

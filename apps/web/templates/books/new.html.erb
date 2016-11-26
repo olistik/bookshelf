@@ -1,6 +1,17 @@
+<% if !params.valid? %>
+  <p>Doh!</p>
+  <% params.error_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
 <%=
   form_for :book, '/books' do
-    text_field :title
-    submit "Create"
+    div do
+      text_field :title
+    end
+    div do
+      submit "Create"
+    end
   end
 %>
