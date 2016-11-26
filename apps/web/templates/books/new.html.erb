@@ -6,7 +6,7 @@
 <% end %>
 
 <%=
-  form_for :book, '/books' do
+  form_for :book, routes.books_path do
     div do
       text_field :title
     end
