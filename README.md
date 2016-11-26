@@ -18,6 +18,11 @@ bundle exec hanami db migrate
 bundle exec hanami console
 ```
 
+```ruby
+repository = BookRepository.new
+repository.create(title: "Hanami")
+```
+
 ## Notes
 
 Project is the main structure.

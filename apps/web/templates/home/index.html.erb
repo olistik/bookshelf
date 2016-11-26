@@ -1,2 +1,8 @@
-<h1><%= greet %></h1>
-<h1><%= say_hi %></h1>
+<h1>Books</h1>
+<table>
+  <% books.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+    </tr>
+  <% end %>
+</table>
