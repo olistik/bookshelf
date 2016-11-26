@@ -11,6 +11,11 @@ bundle exec hanami server
 # .env.development
 # DATABASE_URL="postgres://myusername:mypassword@localhost/bookshelf_development"
 # apps/web/templates/home/index.html.erb -> <h1>Hello</h1>
+
+bundle exec hanami generate model Book
+bundle exec hanami generate migration create_books
+bundle exec hanami db migrate
+bundle exec hanami console
 ```
 
 ## Notes
